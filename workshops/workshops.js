@@ -36,5 +36,5 @@ async function displayWorkshops() {
 }
 
 window.addEventListener('load', async () => {
-    displayWorkshops();
+    await displayWorkshops();
 });
