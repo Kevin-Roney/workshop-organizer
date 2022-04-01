@@ -19,7 +19,9 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: skyblue;
+    background-image: url(/assets/sky.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 main {
@@ -45,6 +47,10 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+}
+
+h1 {
+    color: rgb(0, 62, 61);
 }
 
 h2 {
@@ -139,4 +145,24 @@ footer {
     border-radius: 5px;
     color: rgb(252, 212, 33);
     outline: 5px;
+    box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.workshop:hover {
+    transform: scale(1.1);
+    
+}
+
+form {
+    background-color: rgba(127, 255, 212, 0.475);
+    padding: 20px;
+    max-width: 80%;
+    display: grid;
+    border-radius: 20px;
+}
+
+.participant {
+    border: 5px outset #DE0B0B;
+    color: white;
+    background-color: #DE0B0B;
 }
