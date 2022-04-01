@@ -19,7 +19,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: skyblue;
 }
 
 main {
@@ -32,16 +32,10 @@ main {
 
 section {
     background-color: var(--color5);
-    width: 1000px;
-    max-width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
 }
 
@@ -73,7 +67,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -85,10 +79,10 @@ footer {
     box-shadow: var(--shadow);
 }
 
-  
-  @keyframes pulse {
+
+@keyframes pulse {
     20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
+    transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
     }
 
     40% {
@@ -97,13 +91,13 @@ footer {
 
     60% {
         transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
+    }
 
     80% {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
 
-  }
+}
 
 #logout {
     position: fixed;
@@ -128,4 +122,21 @@ footer {
 
 .auth-container button {
     margin: 10px;
+}
+.workshops-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.workshop {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('/assets/wood.jpg');
+    background-size: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    color: rgb(252, 212, 33);
+    outline: 5px;
 }
