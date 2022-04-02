@@ -4,6 +4,24 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
+export async function moveParticipant(participant_id, workshop_id) {
+    const response = await client 
+        .from('participants')
+        .update({ workshop_id: workshop_id })
+        .match({ id: participant_id });
+    return checkError(response);
+}
+
+export async function getParticipantByName(name) {
+    const response = await client
+        .from('participants')
+        .select('*')
+        .match({
+            name: name
+        });
+    return checkError(response);
+}
+
 export async function createParticipant(participant) {
     const response = await client
         .from('participants')
