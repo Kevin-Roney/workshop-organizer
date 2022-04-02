@@ -1,4 +1,4 @@
-import { checkAuth, logout, getWorkshops, deleteParticipant, getParticipantByName, moveParticipant } from '../fetch-utils.js';
+import { checkAuth, logout, getWorkshops, deleteParticipant, moveParticipant } from '../fetch-utils.js';
 
 checkAuth();
 
@@ -42,16 +42,7 @@ async function displayWorkshops() {
         workshopsEl.append(div);
     }
 }
-/*async function updateWorkshop(name) {
-    //get the participant by name
-    const participant = await getParticipantByName(name);
-    //get the new workshop id
-    //const newWorkshop = .currentTarget
-    //update the participants workshop id
-    //update supabase with new workshop for participant
-    displayWorkshops();
-}*/
-
+//eslint-disable-next-line
 document.addEventListener('drag', function(event) {
 
 }, false);
@@ -90,18 +81,6 @@ document.addEventListener('dragleave', function(event) {
     }
 }, false);
 
-/*document.addEventListener('drop', async function(event) {
-    // prevent default action (open as link for some elements)
-    event.preventDefault();
-    // move dragged elem to the selected drop target
-    if (event.target.className === 'dropzone workshop') {
-        event.target.style.background = '';
-        //dragged.parentNode.removeChild(dragged);
-        event.target.appendChild(dragged);
-        const participant = event.dataTransfer.getData('text');
-        moveParticipant(participant);
-    }
-}, false);*/
 async function drop(event) {
         // prevent default action (open as link for some elements)
     event.preventDefault();

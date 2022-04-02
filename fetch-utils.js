@@ -12,16 +12,6 @@ export async function moveParticipant(participant_id, workshop_id) {
     return checkError(response);
 }
 
-export async function getParticipantByName(name) {
-    const response = await client
-        .from('participants')
-        .select('*')
-        .match({
-            name: name
-        });
-    return checkError(response);
-}
-
 export async function createParticipant(participant) {
     const response = await client
         .from('participants')
