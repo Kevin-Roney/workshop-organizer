@@ -19,7 +19,9 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-image: url(/assets/sky.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 main {
@@ -32,16 +34,10 @@ main {
 
 section {
     background-color: var(--color5);
-    width: 1000px;
-    max-width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
 }
 
@@ -51,6 +47,10 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+}
+
+h1 {
+    color: rgb(0, 62, 61);
 }
 
 h2 {
@@ -73,7 +73,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -85,10 +85,10 @@ footer {
     box-shadow: var(--shadow);
 }
 
-  
-  @keyframes pulse {
+
+@keyframes pulse {
     20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
+    transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
     }
 
     40% {
@@ -97,13 +97,13 @@ footer {
 
     60% {
         transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
+    }
 
     80% {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
 
-  }
+}
 
 #logout {
     position: fixed;
@@ -128,4 +128,56 @@ footer {
 
 .auth-container button {
     margin: 10px;
+}
+.workshops-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.workshop {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('/assets/wood.jpg');
+    background-size: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    color: rgb(252, 212, 33);
+    outline: 5px;
+    box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.workshop:hover {
+    transform: scale(1.1);
+    
+}
+
+form {
+    background-color: rgba(127, 255, 212, 0.475);
+    padding: 20px;
+    max-width: 80%;
+    display: grid;
+    border-radius: 20px;
+}
+
+.participant {
+    border: 5px outset #DE0B0B;
+    color: white;
+    background-color: #DE0B0B;
+}
+
+#draggable {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    background: white;
+}
+
+.dropzone:ondrag {
+    width: 200px;
+    height: 20px;
+    background: blueviolet;
+    margin-bottom: 10px;
+    padding: 10px;
 }
